@@ -1,6 +1,9 @@
 # ignore node_modules folder
 node_modules/
 
+# ignore .idea
+.idea/
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
