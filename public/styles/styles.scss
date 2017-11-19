@@ -28,8 +28,13 @@ body {
   color: white;
   padding: 20px;
   font-family: 'Barlow Condensed', sans-serif;
-  &:hover {
-    cursor: pointer;
+  &:hover {  cursor: pointer;  }
+}
+.row:nth-child(2) {
+  margin-top: 5%;
+  margin-left: 5%;
+  li{
+    font-size: 30px;
+    &:hover { cursor: pointer; }
   }
 }
-// #EEDFBE, #DAB760, #046B4B, #043937, #041727

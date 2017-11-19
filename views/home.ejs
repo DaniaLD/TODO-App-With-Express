@@ -28,6 +28,16 @@
                 </form>
             </div>
         </div>
+        <div class="row">
+            <ul>
+                <%
+                    let tasksLength = tasks.length;
+                    for(let i = 0; i < tasksLength; i++){
+                %>
+                <li> <%= String(tasks[i]) %> </li>
+                <% } %>
+            </ul>
+        </div>
     </div>
 
     <!-- Scripts -->

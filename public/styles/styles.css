@@ -30,4 +30,12 @@ body {
   .submit-button:hover {
     cursor: pointer; }
 
+.row:nth-child(2) {
+  margin-top: 5%;
+  margin-left: 5%; }
+  .row:nth-child(2) li {
+    font-size: 30px; }
+    .row:nth-child(2) li:hover {
+      cursor: pointer; }
+
 /*# sourceMappingURL=styles.css.map */
