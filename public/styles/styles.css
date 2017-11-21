@@ -10,7 +10,8 @@ body {
   font-size: 25px; }
 
 .input {
-  margin-top: 20px;
+  margin-top: 5%;
+  margin-bottom: 5%;
   width: 100%;
   font-size: 20px;
   border: 2px solid white;
@@ -20,7 +21,8 @@ body {
   font-family: 'Barlow Condensed', sans-serif; }
 
 .submit-button {
-  margin-top: 20px;
+  margin-top: 25%;
+  margin-bottom: 5%;
   font-size: 20px;
   border: 2px solid white;
   background: #033649;
@@ -31,11 +33,14 @@ body {
     cursor: pointer; }
 
 .row:nth-child(2) {
-  margin-top: 5%;
   margin-left: 5%; }
   .row:nth-child(2) li {
     font-size: 30px; }
     .row:nth-child(2) li:hover {
-      cursor: pointer; }
+      cursor: pointer;
+      background: #E84A5F; }
+    .row:nth-child(2) li a {
+      color: #DAB760;
+      text-decoration: none; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,6 +1,10 @@
 'use strict';
 const mongoose    = require('mongoose');
 const Task        = require('../models/task');
+mongoose.Promise     = global.Promise;
+
+// Drops database task collection before each run
+mongoose.connection.collections.tasks.drop();
 
 // Home
 let home =  (req, res) => {
@@ -14,13 +18,19 @@ let home =  (req, res) => {
     });
 };
 
+// Tasks
+let tasks = (req, res) => {
+    res.render('tasks', { name: req.params.taskName});
+};
+
+
 // 404
 let notFound = (req, res, next) => {
     res.status(404);
     res.render('404');
 };
 
-let sendData = (req, res) => {
+let sendData = (req,res) => {
     let task = new Task();
     task.taskName = req.body.value;
 
@@ -33,10 +43,12 @@ let sendData = (req, res) => {
     });
 
     res.redirect('/');
+
 };
 
 module.exports= {
     home,
     notFound,
     sendData,
+    tasks,
 };

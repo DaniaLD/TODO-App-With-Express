@@ -34,7 +34,7 @@
                     let tasksLength = tasks.length;
                     for(let i = 0; i < tasksLength; i++){
                 %>
-                <li> <%= String(tasks[i]) %> </li>
+                <li class="col-lg-10"><a href="/tasks/:<%= tasks[i].split(' ').join('-') %>"> <%= String(tasks[i]) %> </a></li>
                 <% } %>
             </ul>
         </div>

@@ -11,7 +11,8 @@ body {
 }
 
 .input {
-  margin-top: 20px;
+  margin-top: 5%;
+  margin-bottom: 5%;
   width: 100%;
   font-size: 20px;
   border: 2px solid white;
@@ -21,7 +22,8 @@ body {
   font-family: 'Barlow Condensed', sans-serif;
 }
 .submit-button {
-  margin-top: 20px;
+  margin-top: 25%;
+  margin-bottom: 5%;
   font-size: 20px;
   border: 2px solid white;
   background: #033649;
@@ -31,10 +33,11 @@ body {
   &:hover {  cursor: pointer;  }
 }
 .row:nth-child(2) {
-  margin-top: 5%;
   margin-left: 5%;
   li{
     font-size: 30px;
-    &:hover { cursor: pointer; }
+    &:hover { cursor: pointer; background: #E84A5F; }
+
+    a { color: #DAB760; text-decoration: none;}
   }
 }
