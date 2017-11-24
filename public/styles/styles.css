@@ -39,8 +39,5 @@ body {
     .row:nth-child(2) li:hover {
       cursor: pointer;
       background: #E84A5F; }
-    .row:nth-child(2) li a {
-      color: #DAB760;
-      text-decoration: none; }
 
 /*# sourceMappingURL=styles.css.map */
