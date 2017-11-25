@@ -23,9 +23,10 @@ app.set('view engine', 'ejs');
 // Routs
 app.get('/', routs.home);
 app.post('/tasks', urlencodedParser, routs.sendData);
+app.delete('/delete/:id', routs.deleteData);
 
 // Setting public for static files
-app.use('/', express.static(__dirname + '/public/'));
+app.use(express.static(__dirname + '/public/'));
 
 // 404 Middleware
 app.use(routs.notFound);

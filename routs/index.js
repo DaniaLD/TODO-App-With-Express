@@ -3,12 +3,14 @@ const Task        = require('../models/task');
 mongoose.Promise  = global.Promise;
 
 // Drops database task collection before each run
-mongoose.connection.collections.tasks.drop();
+let db = mongoose.connection;
+db.collections.tasks.drop();
 
 // Home
 let home =  (req, res) => {
     // Get values of taskName keys
-    Task.distinct('taskName', (err,data) => {
+    // Task.distinct('taskName', (err, data) => {
+    Task.find({}, (err, data) => {
         if(err) {
             console.log("Can not read data from database !!! -> " + err)
         } else {
@@ -27,13 +29,25 @@ let sendData = (req,res) => {
         if(err) {
             console.log("Item didn't save !!! -> " + err);
         } else {
-            console.log("Item saved successfully ...")
+            console.log("Item saved successfully ...");
+            res.redirect('/');
         }
     });
-
-    res.redirect('/');
-
 };
+
+// Delete data from database
+let deleteData = (req, res) => {
+    let query = { _id: req.params.id };
+
+    Task.remove(query, (err) => {
+        if(err) {
+            console.log("Did not delete data !!! -> " + err);
+        } else {
+            console.log("Deleted data successfully ...");
+            res.send('success');
+        }
+    })
+}
 
 // 404
 let notFound = (req, res, next) => {
@@ -45,5 +59,6 @@ let notFound = (req, res, next) => {
 module.exports= {
     home,
     sendData,
+    deleteData,
     notFound,
 };
